@@ -1,0 +1,35 @@
+.backColor{background-color: #464646;}
+
+.header{display: block;width: 100%;padding:5px 20px;margin-bottom:30px;background-color: #0000007D;}
+.header .content{display: flex;justify-content: space-around;align-items: center;}
+.header .content .item{display: flex;justify-content: center;align-items: center;flex-direction:row;gap: 10px;}
+.header .content .item img{max-width: 100%;height: auto;}
+.header .content .item span{display: inline-block;color: #fff;font-size: 25px;font-weight: 700;line-height: 29px;letter-spacing: 0em;text-align: left;}
+
+.weather{display: grid;margin: 0 auto;padding:0 50px;}
+.weather .datePart{display: block;width: 100%;}
+.weather .datePart span{display: block;width: 100%;color: #000;}
+.weather .datePart .date{padding: 5px;text-align: right;width: auto;font-size: 14px;background-color: #e1e1e1; border: 1px solid #000;border-radius:3px ;}
+.weather .datePart input[type="date"] {position: relative;padding: 10px;}
+.weather .datePart input[type="date"]::-webkit-calendar-picker-indicator{color: rgba(0, 0, 0, 0);opacity: 1}
+.weather .datePart input[type="date"]::-moz-calendar-picker-indicator{color: rgba(0, 0, 0, 0);opacity: 1}
+
+.weather .datePart input[type="date"]::-webkit-calendar-picker-indicator{display: block;content: '';background-image:url(../src/simple-line-icons_calender.svg) no-repeat ;background-size:100%;width: 15px;height:20px;position: absolute;color: #999;opacity: 1;top: 13px;}
+
+.weather .datePart input[type="date"]::-moz-calendar-picker-indicator{display: block;content: '';background-image:url('../src/simple-line-icons_calender.svg') no-repeat ;background-size:100%;width: 15px;height: 20px;position: absolute;color: #999;opacity: 1;}
+.weather .labels{display: block;font-size: 14px;font-weight: 400;line-height: 18px;color: #000;text-align:left;}
+.weather .labels div{line-height: 1.75rem;}
+.weather .date{display: block;width: 100%;text-align: center;color: #444444;font-size: 18px;font-weight: 700;line-height: 21px;letter-spacing: 0em;}
+.weather .weatherCard{ display: block; margin: 10px auto; border: 0; border-radius: 7px ; -webkit-border-radius: 7px ; -moz-border-radius: 7px ; -ms-border-radius: 7px ; -o-border-radius: 7px ; }
+.weather .weatherCard .head{display: flex;justify-content: center;align-items: center;flex-direction: row;gap: 10px;padding: 10px 0;}
+.weather .weatherCard .head img{max-width: 100%;height: auto;}
+.weather .weatherCard .head span{display: inline-block;font-size: 19px;font-weight: 700;line-height: 22px;color: #fff;}
+.weather .weatherCard .forcasting{display: block;width: 100%;font-size: 15px;font-weight: 700;line-height: 18px;color: #fff;text-align: center;}
+
+
+.cityName{display: block;width: 100%;padding: 0 50px;margin:30px auto 50px;}
+.cityName .content{display: flex;justify-content: space-between;align-items: center;gap: 4px;border-bottom:1px solid #999;}
+.cityName .content .item{display: flex;flex-direction: column;align-items:flex-start;justify-content:center;}
+.cityName .content .item .subItems{width: 100%;display: flex;justify-content:flex-start;align-items:flex-start;flex-direction: row;gap:4px;position: relative;}
+.cityName .content .item .subItems input{width: 100%; padding:6px 20px; border-radius:8px; background-color: #fff; font-size: 14px; text-align:left; font-style: italic; -webkit-border-radius:8px; -moz-border-radius:8px; -ms-border-radius:8px; -o-border-radius:8px; }
+.cityName .content .item .subItems img.searchIcon{display: block;position: absolute;right:6px;top:5px;}
