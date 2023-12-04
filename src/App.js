@@ -7,7 +7,7 @@ export default function App() {
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
   const [data, setData] = useState([]);
-  
+  let cityName = ""
   useEffect(() => {
     const fetchData = async () => {
       navigator.geolocation.getCurrentPosition(function(position) {
@@ -19,33 +19,18 @@ export default function App() {
       .then(res => res.json())
       .then(result => {
         setData(result)
+        cityName = result.name; 
         console.log(result);
+        console.log("hello",result.name);
       });
     }
     fetchData();
   }, [lat,long])
-   
+   console.log("cityName",cityName);
 
   return (
     <div className="App container">
       <Header></Header>
-      <div className="cityName">
-        <div className="content">
-            <div class="item">
-              <div class="subItems">
-                <img src='/location.jpg'  alt="City Name" className='location'/> 
-                <span>City Name</span>
-              </div>
-                <span>27°10'36'' N & 78°0'29'' E</span>
-            </div>
-            <div class="item">
-              <div class="subItems">
-                <input type="type" name="" placeholder='Search your city here....' class="search" />
-                <img src="/search.png" className='searchIcon' alt='search' />
-              </div>
-            </div>
-        </div>
-      </div>
       {(typeof data.main != 'undefined') ? (
         <Weather weatherData={data}/>
       ): (
